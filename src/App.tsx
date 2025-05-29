@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Copy, RefreshCw, FileText, Sparkles } from 'lucide-react';
+import { Copy, RefreshCw, FileText, Sparkles, Github } from 'lucide-react';
 
 export default function LatexConverter() {
   const [input, setInput] = useState('');
@@ -42,7 +42,18 @@ export default function LatexConverter() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative">
+          {/* GitHub Link */}
+          <a
+            href="https://github.com/kowyo/latex-converter"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-0 right-0 p-2 text-gray-600 hover:text-indigo-600 transition-colors duration-200"
+            aria-label="View source on GitHub"
+          >
+            <Github className="w-6 h-6" />
+          </a>
+          
           <div className="flex items-center justify-center mb-4">
             <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-3 rounded-2xl shadow-lg">
               <Sparkles className="w-8 h-8 text-white" />
